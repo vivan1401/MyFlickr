@@ -16,15 +16,18 @@
     "react-grid-gallery": "^0.5.3",
     "react-infinite-scroller": "^1.2.1",
     "react-scripts": "1.1.5",
-    "reactstrap": "^6.4.0"
+    "reactstrap": "^6.4.0",
+    "serve": "^10.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build", 
+    "heroku-postbuild": "npm run build"
   },
   "homepage": "http://vivan.github.io/myflickr",
   "devDependencies": {
